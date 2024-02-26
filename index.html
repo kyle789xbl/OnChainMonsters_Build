@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | ArcadeGames</title>
+    <title>Unity Web Player | ArcadeGames</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
@@ -40,7 +40,7 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length ? 'none' : 'none';
         }
         var div = document.createElement('div');
         div.innerHTML = msg;
@@ -59,6 +59,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/OnChainMonsters_Build.loader.js";
       var config = {
+        arguments: [],
         dataUrl: buildUrl + "/OnChainMonsters_Build.data",
         frameworkUrl: buildUrl + "/OnChainMonsters_Build.framework.js",
         codeUrl: buildUrl + "/OnChainMonsters_Build.wasm",
